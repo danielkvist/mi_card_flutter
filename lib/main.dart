@@ -1,22 +1,16 @@
 import 'package:flutter/material.dart';
 
-// In order to hot reload to work better
-// we need a stateless or statefull widget.
-// So our hot reload will only rebuild
-// the modified widget instead the complete app
-// using the build method inside that widget.
-// Hot reload then will save the state of the not modified
-// widgets for you.
 void main() {
   runApp(MyApp());
 }
 
-// A Container is like a div in web. If it
-// doesn't have constraints or childs
-// it will try to be as big as possible.
-// To avoid screen areas where te user could not
-// use our widgets Flutter provides the SafeArea widget.
-// A Container can only have a single child.
+// A Column can have multiple children (<Widget>).
+// A Column is constraint horizontally to the width
+// of its children but not vertically. Even we can modify that.
+// We can also modify the vertical direction, the spacing between
+// the containers, etc. It's similar to flexbox.
+// To separate your Containers you could use a SizedBox Widget.
+// The same applies to Rows.
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,14 +18,33 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.all(20.0),
-            color: Colors.white,
-            child: Center(
-              child: Text('Hello'),
-            ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Container(
+                height: 100.0,
+                width: double
+                    .infinity, // It will be as larger as the screen allows it
+                color: Colors.white,
+                child: Center(
+                  child: Text('Container 1'),
+                ),
+              ),
+              Container(
+                height: 100.0,
+                color: Colors.white,
+                child: Center(
+                  child: Text('Container 2'),
+                ),
+              ),
+              Container(
+                height: 100.0,
+                color: Colors.white,
+                child: Center(
+                  child: Text('Container 3'),
+                ),
+              ),
+            ],
           ),
         ),
       ),
