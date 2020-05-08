@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
                 backgroundImage: AssetImage('images/avatar.jpg'),
               ),
               Text(
-                'Johnathan Doe',
+                'Jonathan Doe',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
                   fontSize: 42.0,
@@ -34,6 +34,54 @@ class MyApp extends StatelessWidget {
                   color: Colors.teal[100],
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '+44 123 456 789',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.teal,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      'danielkvist@email.com',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.teal,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
