@@ -18,10 +18,21 @@ class MyApp extends StatelessWidget {
                 backgroundImage: AssetImage('images/avatar.jpg'),
               ),
               Text(
-                'John Doe',
+                'Johnathan Doe',
                 style: TextStyle(
-                  fontSize: 42,
+                  fontFamily: 'Pacifico',
+                  fontSize: 42.0,
                   color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'APP DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 20.0,
+                  color: Colors.teal[100],
+                  letterSpacing: 2.5,
                   fontWeight: FontWeight.bold,
                 ),
               ),
